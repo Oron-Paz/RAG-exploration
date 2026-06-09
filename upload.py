@@ -24,7 +24,8 @@ def upload(path: str, collection_name: str):
         PointStruct(id=i, vector=embeddings[i].tolist(), payload={"text": passages[i]})
         for i in range(len(passages))
     ]
-
+    
+    # need to upload in batches qdrant wasnt happy with the bulk upload :(
     batch_size = 100
     for i in range(0, len(points), batch_size):
         client.upsert(collection_name=collection_name, points=points[i:i+batch_size])
