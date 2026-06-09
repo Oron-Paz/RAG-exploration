@@ -1,4 +1,4 @@
-# LangChain Course
+# RAG-exploration
 
 A RAG (Retrieval-Augmented Generation) project built with LangChain, Anthropic Claude, and Qdrant vector database. Uses the [rag-mini-wikipedia](https://huggingface.co/datasets/rag-datasets/rag-mini-wikipedia) dataset from HuggingFace.
 
